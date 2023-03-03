@@ -14,7 +14,7 @@ const Navbar = () => {
 
   console.log({ cartBadge });
   return (
-    <div className="w-full h-20 border border-gray-200 flex flex-row justify-between p-12">
+    <div className="w-full h-8 fixed bg-white border border-gray-200 flex flex-row justify-between p-8 items-center">
       <div>
         <AiOutlineHome />
       </div>

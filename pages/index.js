@@ -1,4 +1,8 @@
 import Cart from "@/components/cart";
+import Faq from "@/components/faq";
+import Footer from "@/components/footer";
+import About from "@/components/home";
+import Infos from "@/components/infos";
 import Navbar from "@/components/navbar";
 import Products from "@/components/products";
 import { StripeContext } from "@/stripecontext/context";
@@ -10,9 +14,13 @@ export default function Home() {
     <>
       <Navbar />
       {open && <Cart />}
-      <div className=" w-screen h-screen flex justify-center items-center text-4xl font-bold flex-col ">
+      <About />
+      <Infos />
+      <div className=" w-screen h-screen flex justify-center items-center flex-col ">
         <Products />
       </div>
+      <Faq />
+      <Footer />
     </>
   );
 }
