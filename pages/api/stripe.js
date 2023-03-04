@@ -1,11 +1,9 @@
 import Stripe from "stripe";
 
 const Checkout = async (req, res) => {
-  console.log({ reqBody: req.body });
   try {
     const body = req.body;
 
-    console.log({ body });
 
     const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET ?? "", {
       apiVersion: "2020-08-27",

@@ -12,7 +12,6 @@ const Cart = () => {
     return accumalator + items.quantity;
   }, 0);
 
-  console.log({ totalQuantity });
 
   const cartIsNotEmpty = totalQuantity > 0;
   return (

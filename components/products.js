@@ -13,13 +13,11 @@ const Products = () => {
     if (cart.length > 0) {
       cartFilter = cart.filter((product) => {
         if (product.id === item.id) {
-          console.log({ product });
           product.quantity = product.quantity - 1;
           return { ...product };
         }
       });
 
-      console.log({ currentCart: cart });
     } else {
       cart.push({ id: item.id, quantity: 1, info: item });
     }
@@ -36,18 +34,15 @@ const Products = () => {
   };
 
   const add = (item) => {
-    console.log({ item });
     let cartFilter = [];
     if (cart.length > 0) {
       cartFilter = cart.filter((product) => {
         if (product.id === item.id) {
-          console.log({ product });
           product.quantity = product.quantity + 1;
           return { ...product };
         }
       });
 
-      console.log({ currentCart: cart });
     } else {
       cart.push({ id: item.id, quantity: 1, info: item });
     }

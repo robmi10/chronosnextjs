@@ -55,12 +55,6 @@ const StripeProvider = ({ children }) => {
       };
     });
 
-    console.log({ lineItems });
-
-    console.log({
-      lineItemsStringify: JSON.stringify({ lineItems: lineItems }),
-    });
-
     try {
       const res = await fetch("/api/stripe", {
         method: "POST",
