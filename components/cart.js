@@ -12,7 +12,6 @@ const Cart = () => {
     return accumalator + items.quantity;
   }, 0);
 
-
   const cartIsNotEmpty = totalQuantity > 0;
   return (
     <div className="fixed right-0 top-0 animate-moveback h-full w-screen md:w-3/12 bg-white border-2 border-gray-100">

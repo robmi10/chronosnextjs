@@ -65,7 +65,9 @@ const StripeProvider = ({ children }) => {
       });
       const b = await res.json();
       window.location.href = b.data.url;
-      setCheckoutstatus(false);
+      await setCheckoutstatus(false);
+      await setCart([]);
+      await localStorage.removeItem("cart");
     } catch (error) {
       setCheckoutstatus(false);
       console.error({ error });

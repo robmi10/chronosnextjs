@@ -17,7 +17,6 @@ const Products = () => {
           return { ...product };
         }
       });
-
     } else {
       cart.push({ id: item.id, quantity: 1, info: item });
     }
@@ -42,7 +41,6 @@ const Products = () => {
           return { ...product };
         }
       });
-
     } else {
       cart.push({ id: item.id, quantity: 1, info: item });
     }
@@ -59,7 +57,7 @@ const Products = () => {
   };
 
   return (
-    <div className="mt-20 flex h-screen  justify-center w-screen  md:w-full flex-col items-center p-24">
+    <div className="mt-16 mb-16 flex h-screen  justify-center w-screen  md:w-full flex-col items-center p-36">
       <span className="text-4xl mt-10 md:text-5xl font-semibold  tracking-tight">
         HANDLA
       </span>
@@ -89,9 +87,9 @@ const Products = () => {
                       remove(option);
                     }}
                   >
-                    <AiOutlineMinus />
+                    <AiOutlineMinus size={20} />
                   </button>
-                  <div>
+                  <div className=" text-xl ">
                     {cart?.[index]?.quantity > 0 ? cart?.[index]?.quantity : 0}
                   </div>
                   <button
@@ -99,7 +97,7 @@ const Products = () => {
                       add(option);
                     }}
                   >
-                    <AiOutlinePlus />
+                    <AiOutlinePlus size={20} />
                   </button>
                 </div>
               </div>
