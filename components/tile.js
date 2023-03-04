@@ -47,7 +47,6 @@ export const TileContent = ({ children }) => (
 );
 
 export const Tile = ({ page, renderContent }) => {
-  console.log({ pageNow: page });
   const { currentPage, numOfPages } = useContext(TileContext);
   const refContainer = useRef();
   const progress = Math.max(0, currentPage - page);

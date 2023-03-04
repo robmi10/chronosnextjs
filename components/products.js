@@ -1,11 +1,12 @@
 import { StripeContext } from "@/stripecontext/context";
-import Image from "next/image";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { useToast } from "@chakra-ui/toast";
 
 const Products = () => {
-  const { prices, cart, setCart } = useContext(StripeContext);
-  const [cartstatus, setCartstatus] = useState(false);
+  const toast = useToast();
+  const { prices, cart, setCart, cartstatus, setCartstatus } =
+    useContext(StripeContext);
 
   const remove = (item) => {
     let cartFilter = [];
@@ -25,6 +26,13 @@ const Products = () => {
 
     setCart(cart);
     setCartstatus(!cartstatus);
+    toast({
+      position: "top-left",
+      title: "Produkt är borttagen.",
+      status: "success",
+      duration: 500,
+      isClosable: true,
+    });
   };
 
   const add = (item) => {
@@ -43,13 +51,21 @@ const Products = () => {
     } else {
       cart.push({ id: item.id, quantity: 1, info: item });
     }
-
+    // setOpen(!open);
     setCart(cart);
     setCartstatus(!cartstatus);
+    toast({
+      position: "top-left",
+
+      title: "Produkt är tillagd.",
+      status: "success",
+      duration: 500,
+      isClosable: true,
+    });
   };
 
   return (
-    <div className="mt-4 flex h-screen  justify-center w-full flex-col items-center p-16">
+    <div className="mt-20 flex h-screen  justify-center w-full flex-col items-center p-16">
       <span className="text-4xl mt-10 md:text-5xl font-semibold  tracking-tight">
         HANDLA
       </span>
@@ -58,13 +74,21 @@ const Products = () => {
           <div key={index} className="w-5/12 h-full p-8  ">
             {/* <h1 className="text-2xl font-bold">{option.product.name}</h1> */}
             <div className="w-full h-full text-sm ">
-              <img alt="biowtr" src="/images/biowtr.jpg" />
-              <div className=" text-2xl">{option.product.description} </div>
-              <h1 className=" text-lg">PRIS</h1>
-              <h1 className=" text-sm">
-                {" "}
-                {option?.unit_amount_decimal.slice(0, -2)} SEK
-              </h1>
+              <img
+                className=" rounded-full"
+                alt="biowtr"
+                src="/images/biowtr.jpg"
+              />
+              <div className=" w-full  justify-center items-center flex">
+                <div className=" flex mt-5 flex-col justify-center w-3/5 ">
+                  <div className=" text-2xl">{option.product.description} </div>
+                  <h1 className=" text-lg">PRIS</h1>
+                  <h1 className=" text-sm">
+                    {" "}
+                    {option?.unit_amount_decimal.slice(0, -2)} SEK
+                  </h1>
+                </div>
+              </div>
               <div className=" w-full flex justify-center">
                 <div className="flex flex-row justify-between mt-4 w-2/4">
                   <button

@@ -11,7 +11,6 @@ import {
 } from "./info";
 
 const Infos = () => {
-  const [readmore, setReadmore] = useState(false);
   return (
     <TileWrapper numOfPages={3}>
       <TileBackground>
@@ -46,7 +45,7 @@ const Infos = () => {
             <InfoContainer>
               <InfoLeft progress={progress}>
                 <span className="text-4xl md:text-5xl font-semibold  tracking-tight">
-                  Niacin bidrar bland annat till:
+                  Niacin bidrar bland annat till
                 </span>
               </InfoLeft>
               <InfoRight progress={progress}>
@@ -69,7 +68,7 @@ const Infos = () => {
             <InfoContainer>
               <InfoLeft progress={progress}>
                 <span className="text-4xl md:text-5xl font-semibold  tracking-tight">
-                  Studier:
+                  Studier
                 </span>
               </InfoLeft>
               <InfoRight progress={progress}>

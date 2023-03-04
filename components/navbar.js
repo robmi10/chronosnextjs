@@ -1,25 +1,28 @@
 import { StripeContext } from "@/stripecontext/context";
+import Link from "next/link";
 import React, { useContext, useEffect } from "react";
 import { AiOutlineShopping, AiOutlineHome } from "react-icons/ai";
 
 const Navbar = () => {
-  const { setOpen, open, cart } = useContext(StripeContext);
+  const { setOpen, cart, totalquantity, setTotalquantity } =
+    useContext(StripeContext);
   const cartBadge = cart.length > 0;
 
+  const totalQuantity = cart?.reduce((accumalator, items) => {
+    return accumalator + items.quantity;
+  }, 0);
+
   useEffect(() => {
-    console.log({ cart });
-  }, [cart]);
+    setTotalquantity(totalQuantity);
+  }, [totalquantity]);
 
-  console.log({ cartBadge });
-
-  console.log({ cartBadge });
   return (
     <div className="w-full h-8 fixed bg-white border border-gray-200 flex flex-row justify-between p-8 items-center">
-      <div>
+      <Link href="/">
         <AiOutlineHome />
-      </div>
+      </Link>
 
-      <div className=" text-2xl">BIOTWR</div>
+      <div className=" text-2xl">BIO-TWR</div>
       <div>
         <button
           onClick={() => {
@@ -27,8 +30,8 @@ const Navbar = () => {
           }}
         >
           {cartBadge && (
-            <div className="absolute top-8 w-4 h-4 bg-blue-500 text-white rounded-md  text-xs  ">
-              {cart.length}
+            <div className="absolute top-1 ml-[-1px] w-5 h-5 bg-indigo-700 text-white rounded-full items-center flex justify-center text-xs  ">
+              {totalQuantity}
             </div>
           )}
           <AiOutlineShopping />

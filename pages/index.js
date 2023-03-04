@@ -6,19 +6,20 @@ import Infos from "@/components/infos";
 import Navbar from "@/components/navbar";
 import Products from "@/components/products";
 import { StripeContext } from "@/stripecontext/context";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 export default function Home() {
-  const { open } = useContext(StripeContext);
+  const { open, cart, cartstatus, totalquantity, prices } =
+    useContext(StripeContext);
+
+  useEffect(() => {}, [cartstatus, totalquantity]);
+
   return (
     <>
-      <Navbar />
       {open && <Cart />}
       <About />
       <Infos />
-      <div className=" w-screen h-screen flex justify-center items-center flex-col ">
-        <Products />
-      </div>
+      <Products />
       <Faq />
       <Footer />
     </>

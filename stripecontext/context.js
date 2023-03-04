@@ -6,20 +6,29 @@ const StripeProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [open, setOpen] = useState(false);
   const [checkoutstatus, setCheckoutstatus] = useState(false);
+  const [cartstatus, setCartstatus] = useState(false);
+  const [totalquantity, setTotalquantity] = useState(false);
 
   useEffect(() => {
     getStripeData();
   }, []);
 
   useEffect(() => {
+    let cartStorage = localStorage.getItem("cart");
+    if (cart.length > 0) {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+    if (cartStorage && !cart.length > 0) {
+      setCart(JSON.parse(cartStorage));
+    }
+  }, [cartstatus]);
+
+  useEffect(() => {
+    setCartstatus(!cartstatus);
     if (checkoutstatus) {
       checkoutapi();
     }
   }, [checkoutstatus]);
-
-  useEffect(() => {
-    console.log("inside cart context");
-  }, [setCart]);
 
   const getStripeData = async () => {
     const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET ?? "", {
@@ -51,7 +60,7 @@ const StripeProvider = ({ children }) => {
     console.log({
       lineItemsStringify: JSON.stringify({ lineItems: lineItems }),
     });
-    setCheckoutstatus(false);
+
     try {
       const res = await fetch("/api/stripe", {
         method: "POST",
@@ -60,12 +69,12 @@ const StripeProvider = ({ children }) => {
         },
         body: JSON.stringify({ lineItems: lineItems[0] }),
       });
-
       const b = await res.json();
-      console.log({ b });
       window.location.href = b.data.url;
+      setCheckoutstatus(false);
     } catch (error) {
-      console.log({ error });
+      setCheckoutstatus(false);
+      console.error({ error });
     }
   };
 
@@ -80,6 +89,10 @@ const StripeProvider = ({ children }) => {
         setOpen,
         checkoutstatus,
         setCheckoutstatus,
+        cartstatus,
+        setCartstatus,
+        totalquantity,
+        setTotalquantity,
       }}
     >
       {children}
