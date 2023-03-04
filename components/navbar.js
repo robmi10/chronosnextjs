@@ -30,7 +30,7 @@ const Navbar = () => {
           }}
         >
           {cartBadge && (
-            <div className="absolute top-1 ml-[-1px] w-5 h-5 bg-indigo-700 text-white rounded-full items-center flex justify-center text-xs  ">
+            <div className=" animate-animate absolute top-1 ml-[-1px] w-5 h-5 bg-indigo-700 text-white rounded-full items-center flex justify-center text-xs  ">
               {totalQuantity}
             </div>
           )}

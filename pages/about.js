@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className=" w-screen md:h-screen md:flex-row md:flex bg-red-100">
       <div className="bg-white md:w-2/4 h-screen  flex flex-col gap-4 text-black p-8 justify-center items-center">
-        <Link href="/" className=" absolute top-20 left-0 p-8">
+        <Link href="/" className=" absolute top-20 left-0 p-8 animate-pulse">
           <AiOutlineArrowLeft size={30} />
         </Link>
         <div className=" flex flex-col gap-2">
@@ -14,7 +14,7 @@ const About = () => {
         </div>
       </div>
       <div className="bg-black md:w-2/4 h-full flex flex-col gap-4 text-white p-8 justify-center items-center">
-        <div className=" flex flex-col gap-2">
+        <div className=" animate-animate flex flex-col gap-2">
           <span>
             Ett kolsyrat vatten innehållandes tillskott med ett tydligt syfte,
             det är vår vision. Existerande vitmanidrycker innehåller ofta inte

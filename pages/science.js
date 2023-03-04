@@ -6,7 +6,7 @@ const Science = () => {
   return (
     <div className=" w-screen md:h-screen md:flex-row md:flex bg-red-100">
       <div className="bg-white md:w-2/4 h-screen  flex flex-col gap-4 text-black p-8 justify-center items-center">
-        <Link href="/" className=" absolute top-20 left-0 p-8">
+        <Link href="/" className=" absolute top-20 left-0 p-8 animate-pulse">
           <AiOutlineArrowLeft size={30} />
         </Link>
         <div className=" flex flex-col gap-2">
@@ -14,7 +14,7 @@ const Science = () => {
         </div>
       </div>
       <div className="bg-black md:w-2/4 h-full flex flex-col gap-4 text-white p-8 justify-center items-center">
-        <div className=" flex flex-col gap-2">
+        <div className=" animate-animate  flex flex-col gap-2">
           <span>
             NAD + (nikotinamidadeninnukleotid) är en viktig faktor för flera
             funktioner i människokroppen såsom ämnesomsättningen och reparation
@@ -27,7 +27,7 @@ const Science = () => {
           </span>
         </div>
 
-        <div className=" flex flex-col gap-2">
+        <div className="animate-animate flex flex-col gap-2">
           <span>
             Människokroppen utvinner energi från fett, kolhydrater och protein
             med hjälp av flera olika enzymatiska reaktioner. Denna process
@@ -43,7 +43,7 @@ const Science = () => {
             ämnesomsättningen och genuttrycket (2) .
           </span>
         </div>
-        <div className=" flex flex-col gap-2">
+        <div className="animate-animate flex flex-col gap-2">
           <span>
             Det kronologiska åldrandet är idag omöjligt att bromsa, men kan vi
             på något sätt höja de sjunkande NAD + nivåerna som åldrandet medför?
@@ -62,7 +62,7 @@ const Science = () => {
           </span>
         </div>
 
-        <div className=" flex flex-col gap-2">
+        <div className="animate-animate flex flex-col gap-2">
           <span>
             Det vet vi inte riktigt ännu men i en studie (NAD+ flux is
             maintained in aged mice despite lower tissue concentrations -
