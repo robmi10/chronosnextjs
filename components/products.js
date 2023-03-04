@@ -51,7 +51,6 @@ const Products = () => {
     } else {
       cart.push({ id: item.id, quantity: 1, info: item });
     }
-    // setOpen(!open);
     setCart(cart);
     setCartstatus(!cartstatus);
     toast({
@@ -65,21 +64,20 @@ const Products = () => {
   };
 
   return (
-    <div className="mt-20 flex h-screen  justify-center w-full flex-col items-center p-16">
+    <div className="mt-20 flex h-screen  justify-center w-screen  md:w-full flex-col items-center p-24">
       <span className="text-4xl mt-10 md:text-5xl font-semibold  tracking-tight">
         HANDLA
       </span>
       {prices?.map((option, index) => {
         return (
-          <div key={index} className="w-5/12 h-full p-8  ">
-            {/* <h1 className="text-2xl font-bold">{option.product.name}</h1> */}
+          <div key={index} className="w-screen  md:w-5/12 h-full p-8  ">
             <div className="w-full h-full text-sm ">
               <img
                 className=" rounded-full"
                 alt="biowtr"
                 src="/images/biowtr.jpg"
               />
-              <div className=" w-full  justify-center items-center flex">
+              <div className=" w-full justify-center items-center flex">
                 <div className=" flex mt-5 flex-col justify-center w-3/5 ">
                   <div className=" text-2xl">{option.product.description} </div>
                   <h1 className=" text-lg">PRIS</h1>

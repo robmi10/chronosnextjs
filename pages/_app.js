@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import StripeProvider from "@/stripecontext/context";
 import "@/styles/globals.css";
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }) {
             <ChakraProvider>
               <Navbar />
               <Component {...pageProps} />
+              <Footer />
             </ChakraProvider>
           </StripeProvider>
         </ScrollObserver>

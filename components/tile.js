@@ -29,7 +29,7 @@ export const TileWrapper = ({ children, numOfPages }) => {
     <TileContext.Provider value={{ numOfPages, currentPage }}>
       <div
         ref={refContainer}
-        className="relative text-white"
+        className="relative bg-black text-white"
         style={{ height: numOfPages * 100 + "vh" }}
       >
         {children}

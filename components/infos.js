@@ -21,14 +21,15 @@ const Infos = () => {
           page={0}
           renderContent={({ progress }) => (
             <InfoContainer>
-              <InfoLeft progress={progress}>
-                <span className="text-4xl md:text-5xl font-semibold  tracking-tight">
-                  Om vår dricka
-                </span>
-              </InfoLeft>
-
+              <div className=" w-full h-36 md:h-full bg-black flex justify-center items-center ">
+                <InfoLeft progress={progress}>
+                  <span className=" md:text-5xl font-semibold  tracking-tight">
+                    Om vår dricka
+                  </span>
+                </InfoLeft>
+              </div>
               <InfoRight progress={progress}>
-                <span className="text-4xl md:text-2xl font-semibold flex flex-col gap-2   text-black">
+                <span className="mt-20 text-2xl font-semibold flex flex-col gap-2   text-black">
                   Existerande vitamindrycker innehåller ofta många andra
                   tillsatser såsom sötningsmedel. BioWTR innehåller tillskott
                   med ett tydligt syfte, inget annat. Vår första produkt är
@@ -43,14 +44,17 @@ const Infos = () => {
           page={1}
           renderContent={({ progress }) => (
             <InfoContainer>
-              <InfoLeft progress={progress}>
-                <span className="text-4xl md:text-5xl font-semibold  tracking-tight">
-                  Niacin bidrar bland annat till
-                </span>
-              </InfoLeft>
+              <div className=" w-full h-48 md:h-full bg-black flex justify-center items-center ">
+                <InfoLeft progress={progress}>
+                  <span className=" md:text-5xl font-semibold  tracking-tight">
+                    Niacin bidrar bland annat till
+                  </span>
+                </InfoLeft>
+              </div>
+
               <InfoRight progress={progress}>
-                <span className="text-4xl md:text-2xl font-semibold   text-black">
-                  <div className="flex flex-col ">
+                <span className="text-2xl md:text-2xl font-semibold   text-black">
+                  <div className=" flex flex-col ">
                     <h1>Nervsystemets normala funktion</h1>
                     <h1>Normal psykologisk funktion</h1>
                     <h1>
@@ -66,14 +70,16 @@ const Infos = () => {
           page={2}
           renderContent={({ progress }) => (
             <InfoContainer>
-              <InfoLeft progress={progress}>
-                <span className="text-4xl md:text-5xl font-semibold  tracking-tight">
-                  Studier
-                </span>
-              </InfoLeft>
+              <div className=" w-full h-48 md:h-full bg-black flex justify-center items-center ">
+                <InfoLeft progress={progress}>
+                  <span className="text-4xl md:text-5xl font-semibold  tracking-tight">
+                    Studier
+                  </span>
+                </InfoLeft>
+              </div>
               <InfoRight progress={progress}>
-                <span className="text-4xl md:text-2xl font-semibold   text-black">
-                  <div className=" flex  flex-col gap-4">
+                <span className=" md:text-2xl font-semibold   text-black">
+                  <div className="text-2xl flex flex-col gap-4">
                     <div>
                       Niacin omsätts till NAD + i våra kroppar som är ett
                       viktigt ämne för många viktiga biologiska processer och
