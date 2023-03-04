@@ -85,13 +85,15 @@ const Infos = () => {
                       viktigt ämne för många viktiga biologiska processer och
                       som sjunker när vi åldras.{" "}
                       <div>
-                        <InfoLink
+                        <Link
+                          className=" underline"
+                          target="_blank"
                           href={
                             "https://www.science.org/doi/10.1126/science.aac4854?url_ver=Z39.88-2003&amp;rfr_id=ori:rid:crossref.org&amp;rfr_dat=cr_pub%20%200pubmed"
                           }
                         >
                           (1)
-                        </InfoLink>{" "}
+                        </Link>{" "}
                         <Link href="/science">LÄS MER</Link>
                       </div>
                     </div>
@@ -100,13 +102,14 @@ const Infos = () => {
                       NAD + nivåer samt förbättra muskelfunktion, framförallt
                       hos individer med åldersrelaterad muskelsjukdom.
                       <div>
-                        <InfoLink
+                        <Link
+                          target="_blank"
                           href={
                             "https://www.sciencedirect.com/science/article/pii/S155041312030190X?via%3Dihub#undfig1"
                           }
                         >
                           (2 Adult-onset mitochondrial myopathy)
-                        </InfoLink>
+                        </Link>
                       </div>
                     </div>
                   </div>
