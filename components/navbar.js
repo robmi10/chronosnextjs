@@ -17,7 +17,7 @@ const Navbar = () => {
   }, [totalquantity]);
 
   return (
-    <div className="w-full h-8 fixed bg-white border border-gray-200 flex flex-row justify-between p-8 items-center">
+    <div className="w-full h-8 fixed bg-white border  border-gray-200 flex flex-row justify-between p-8 items-center">
       <Link href="/">
         <AiOutlineHome />
       </Link>

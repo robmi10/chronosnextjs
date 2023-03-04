@@ -18,7 +18,9 @@ export default function Home() {
     <>
       {open && <Cart />}
       <About />
-      <Infos />
+      <div id="infonow">
+        <Infos />
+      </div>
       <Products />
       <Faq />
     </>

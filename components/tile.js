@@ -39,7 +39,7 @@ export const TileWrapper = ({ children, numOfPages }) => {
 };
 
 export const TileBackground = ({ children }) => (
-  <div className="absolute h-full w-full bg-gray-100">{children}</div>
+  <div className="absolute h-full w-full bg-white">{children}</div>
 );
 
 export const TileContent = ({ children }) => (

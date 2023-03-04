@@ -12,7 +12,7 @@ import {
 
 const Infos = () => {
   return (
-    <TileWrapper numOfPages={3}>
+    <TileWrapper numOfPages={3} id="info">
       <TileBackground>
         <InfoBackground />
       </TileBackground>
@@ -20,7 +20,7 @@ const Infos = () => {
         <Tile
           page={0}
           renderContent={({ progress }) => (
-            <InfoContainer>
+            <InfoContainer id="om-oss">
               <div className=" w-full h-36 md:h-full bg-black flex justify-center items-center ">
                 <InfoLeft progress={progress}>
                   <span className=" md:text-5xl font-semibold  tracking-tight">
