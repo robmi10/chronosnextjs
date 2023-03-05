@@ -22,7 +22,7 @@ const Navbar = () => {
         <AiOutlineHome />
       </Link>
 
-      <div className=" text-2xl">BIO-TWR</div>
+      <div className=" text-2xl">BIO-WTR</div>
       <div>
         <button
           onClick={() => {
