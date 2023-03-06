@@ -30,26 +30,33 @@ const Cart = () => {
         <>
           <div className=" w-full flex justify-center h-auto  overflow-auto flex-col">
             {cart.map((option, i) => {
+              console.log({ optionCart: option });
               return (
-                <div
-                  key={i}
-                  className="w-full h-full items-center flex flex-col justify-center p-8 mb-16"
-                >
-                  <img
-                    className="w-full h-3/4 rounded-full"
-                    src={option.info?.product.images}
-                  />
-                  <div className=" w-full justify-center  flex flex-col p-4 gap-1">
-                    <div className=" text-2xl">{option.info?.product.name}</div>
-                    <div className=" text-md">
-                      {option.info?.product.description}
+                <>
+                  {option.quantity > 0 && (
+                    <div
+                      key={i}
+                      className="w-full h-full items-center flex flex-col justify-center p-8 mb-16"
+                    >
+                      <img
+                        className="w-full h-3/4 rounded-full"
+                        src={option.info?.product.images}
+                      />
+                      <div className=" w-full justify-center  flex flex-col p-4 gap-1">
+                        <div className=" text-2xl">
+                          {option.info?.product.name}
+                        </div>
+                        <div className=" text-md">
+                          {option.info?.product.description}
+                        </div>
+                        <div>
+                          {option.info?.unit_amount_decimal.slice(0, -2)} SEK
+                        </div>
+                        <div>Antal {option.quantity} </div>
+                      </div>
                     </div>
-                    <div>
-                      {option.info?.unit_amount_decimal.slice(0, -2)} SEK
-                    </div>
-                    <div>Antal {option.quantity} </div>
-                  </div>
-                </div>
+                  )}
+                </>
               );
             })}
           </div>
@@ -65,7 +72,7 @@ const Cart = () => {
             </button>
 
             <button
-              className="bg-white ml-6 border-2 w-56 h-8 justify-center items-center flex rounded-md text-black text-1xl"
+              className="bg-white ml-6 border-2 w-56 h-8 justify-center items-center flex rounded-md text-slate-700 text-1xl"
               onClick={() => {
                 setCart([]);
                 localStorage.removeItem("cart");

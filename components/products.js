@@ -33,23 +33,14 @@ const Products = () => {
   };
 
   const add = (item) => {
-    console.log({ item });
-    console.log({ cart });
     let cartFilter = [];
-    let existInCart = cart.find((option) => option.id === item.id);
+    cartFilter = cart.filter((product) => {
+      if (product.id === item.id) {
+        product.quantity = product.quantity + 1;
+        return { ...product };
+      }
+    });
 
-    console.log({ existInCart });
-    if (cart.length > 0 && existInCart) {
-      cartFilter = cart.filter((product) => {
-        if (product.id === item.id) {
-          product.quantity = product.quantity + 1;
-          return { ...product };
-        }
-      });
-    } else {
-      console.log("cart push");
-      cart.push({ id: item.id, quantity: 1, info: item });
-    }
     setCart(cart);
     setCartstatus(!cartstatus);
     toast({
@@ -63,7 +54,7 @@ const Products = () => {
   };
 
   return (
-    <div className="mt-16 mb-16 flex h-auto justify-center w-screen md:w-full md:flex-col items-center p-36">
+    <div className="mt-16 mb-16 flex h-auto justify-center w-screen md:w-full flex-col items-center p-36 text-slate-700">
       <span className="text-4xl mt-10 md:text-5xl font-semibold  tracking-tight">
         HANDLA
       </span>
@@ -97,11 +88,11 @@ const Products = () => {
                     <AiOutlineMinus size={20} />
                   </button>
                   <div className=" text-xl ">
-                    {cart?.[index]?.quantity > 0 ? cart?.[index]?.quantity : 0}
+                    {cart?.[index] ? cart?.[index]?.quantity : 0}
                   </div>
                   <button
                     onClick={() => {
-                      add(option);
+                      add(option, index);
                     }}
                   >
                     <AiOutlinePlus size={20} />

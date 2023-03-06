@@ -12,8 +12,8 @@ import {
 
 const Faq = () => {
   return (
-    <div className=" w-screen md:h-screen flex-col md:flex-row flex bg-red-100">
-      <div className="bg-white md:w-2/4 h-full flex flex-col gap-4 text-black p-8 justify-center items-center">
+    <div className=" w-screen md:h-screen flex-col md:flex-row flex ">
+      <div className="bg-white md:w-2/4 h-full flex flex-col gap-4 text-slate-700 p-8 justify-center items-center">
         <div className=" flex flex-col gap-2">
           <span className=" text-2xl font-semibold">
             {" "}
@@ -65,7 +65,7 @@ const Faq = () => {
           </span>
         </div>
       </div>
-      <div className="bg-black md:w-2/4 h-full flex flex-col gap-4 text-white p-8 justify-center items-center">
+      <div className="bg-slate-400 md:w-2/4 h-full flex flex-col gap-4 text-white p-8 justify-center items-center">
         <div className=" flex flex-col gap-2">
           <span className=" text-2xl font-semibold">
             Är NMN ett stabilt ämne?

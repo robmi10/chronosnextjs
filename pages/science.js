@@ -4,8 +4,8 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 
 const Science = () => {
   return (
-    <div className=" w-screen md:h-screen md:flex-row md:flex bg-red-100">
-      <div className="bg-white md:w-2/4 h-screen  flex flex-col gap-4 text-black p-8 justify-center items-center">
+    <div className=" w-screen md:h-screen md:flex-row md:flex ">
+      <div className="bg-white md:w-2/4 h-screen  flex flex-col gap-4 text-slate-700 p-8 justify-center items-center">
         <Link href="/" className=" absolute top-20 left-0 p-8 animate-pulse">
           <AiOutlineArrowLeft size={30} />
         </Link>
@@ -13,7 +13,7 @@ const Science = () => {
           <span className=" text-2xl font-semibold"> VETENSKAP </span>
         </div>
       </div>
-      <div className="bg-black md:w-2/4 h-full flex flex-col gap-4 text-white p-8 justify-center items-center">
+      <div className="bg-slate-400 md:w-2/4 h-full flex flex-col gap-4 text-white p-8 justify-center items-center">
         <div className=" animate-animate  flex flex-col gap-2">
           <span>
             NAD + (nikotinamidadeninnukleotid) är en viktig faktor för flera

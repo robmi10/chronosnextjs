@@ -6,7 +6,7 @@ import { AiFillInstagram } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer className="min-h-full flex gap-8 items-center justify-center bg-white border border-4 text-black p-20">
+    <footer className="min-h-full flex gap-8 items-center justify-center bg-white border border-4 text-slate-700 p-20">
       <CiTwitter width={18} height={18} />
       <AiFillInstagram width={18} height={18} />
       <Link href="/terms">Terms</Link>

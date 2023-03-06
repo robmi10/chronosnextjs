@@ -11,7 +11,7 @@ const StripeProvider = ({ children }) => {
 
   useEffect(() => {
     getStripeData();
-  }, []);
+  }, [cart]);
 
   useEffect(() => {
     let cartStorage = localStorage.getItem("cart");
@@ -31,6 +31,7 @@ const StripeProvider = ({ children }) => {
   }, [checkoutstatus]);
 
   const getStripeData = async () => {
+    let cartStorage = localStorage.getItem("cart");
     const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET ?? "", {
       apiVersion: "2020-08-27",
     });
@@ -44,15 +45,26 @@ const StripeProvider = ({ children }) => {
       return price.active;
     });
 
+    const cartItems = prices.map((option) => {
+      return {
+        id: option.id,
+        quantity: 0,
+        info: option,
+      };
+    });
+
     setPrices(prices);
+    if (cart.length <= 0 && !cartStorage) {
+      setCart(cartItems);
+    }
   };
 
   const checkoutapi = async () => {
-    const lineItems = cart.map((option) => {
-      return {
-        price: option.id,
-        quantity: option.quantity,
-      };
+    let lineItemArray = [];
+    cart.map((option) => {
+      if (option.quantity > 0) {
+        lineItemArray.push({ price: option.id, quantity: option.quantity });
+      }
     });
 
     try {
@@ -61,7 +73,7 @@ const StripeProvider = ({ children }) => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ lineItems: lineItems[0] }),
+        body: JSON.stringify({ lineItems: lineItemArray }),
       });
       const b = await res.json();
       window.location.href = b.data.url;
