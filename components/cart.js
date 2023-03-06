@@ -61,7 +61,7 @@ const Cart = () => {
             })}
           </div>
 
-          <div className="w-full flex flex-col gap-2 h-32 mt-2 items-center mb-8  bottom-0 justify-center  bg-white self-center ">
+          <div className="w-full flex flex-col gap-2 h-48 md:h-32 mb-40  mt-2 items-center md:mb-8  bottom-0 md:justify-center self-center ">
             <button
               className="bg-black ml-6 w-56 h-8 rounded-md text-white text-1xl"
               onClick={() => {
