@@ -10,8 +10,8 @@ const Checkout = async (req, res) => {
 
     const session = await stripe.checkout.sessions.create({
       shipping_address_collection: { allowed_countries: ["SE"] },
-      success_url: "http://localhost:3000/success",
-      cancel_url: "http://localhost:3000/cancel",
+      success_url: "https://www.chronosnutrition.se/success",
+      cancel_url: "https://www.chronosnutrition.se/cancel",
       line_items: body.lineItems,
       mode: "payment",
     });
