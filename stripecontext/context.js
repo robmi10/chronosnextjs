@@ -8,6 +8,7 @@ const StripeProvider = ({ children }) => {
   const [checkoutstatus, setCheckoutstatus] = useState(false);
   const [cartstatus, setCartstatus] = useState(false);
   const [totalquantity, setTotalquantity] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   useEffect(() => {
     getStripeData();
@@ -101,6 +102,8 @@ const StripeProvider = ({ children }) => {
         setCartstatus,
         totalquantity,
         setTotalquantity,
+        menu,
+        setMenu,
       }}
     >
       {children}

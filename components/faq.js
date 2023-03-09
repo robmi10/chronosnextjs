@@ -15,53 +15,48 @@ const Faq = () => {
     <div className=" w-screen md:h-screen flex-col md:flex-row flex ">
       <div className="bg-white md:w-2/4 h-full flex flex-col gap-4 text-slate-700 p-8 justify-center items-center">
         <div className=" flex flex-col gap-2">
-          <span className=" text-2xl font-semibold">
-            {" "}
-            Vad är NMN och niacin?
-          </span>
+          <span className=" text-2xl font-semibold"> Vad är niacin?</span>
           <span>
-            Både NMN och niacin är naturligt förekommande ämnen som kan omsättas
-            till NAD + i kroppen. Läs mer om detta här.
+            Niacin är ett B-vitamin (B3) och finns naturligt i kosten. Människor
+            i västvärlden lider sällan av niacinbrist men ny forskning tyder på
+            att tillskott av niacin högt över dagligt rekommenderat intag kan ha
+            positiva hälsoeffekter.
           </span>
         </div>
 
         <div className=" flex flex-col gap-2">
           <span className=" text-2xl font-semibold">
             {" "}
-            Kan jag få i mig NMN via kosten?
+            Finns niacin i kosten?
           </span>
           <span>
-            Ja, NMN finns i nästan allt vi äter och nivåerna är höga i grönsaker
-            och frukter såsom broccoli, avokado och tomat. Dock är de naturligt
-            förekommande nivåerna runt 10mg NMN/kg föda, d.v.s. du behöver äta
-            ca 25 Kg broccoli för att få i dig lika mycket NMN som i en BioWTR-
-            flaska.
+            Ja, niacin finns i kosten och det är sällan människor i västvärlden
+            lider av niacinbrist. Dock kan tillskott av niacin ha hälsofrämjande
+            effekter.
           </span>
         </div>
 
         <div className=" flex flex-col gap-2">
           <span className=" text-2xl font-semibold">
             {" "}
-            Kommer jag leva ett friskare liv om jag dricker 1 flaska BioWTR om
-            dagen?
+            Kommer jag att leva ett friskare liv om jag dricker BioWTR?
           </span>
           <span>
-            Vi kan inte säga hur BioWTR kommer påverka dig. Vi kan endast
-            hänvisa till de vetenskapliga studier som gjorts och förmedla vad
-            som de har visat. Läs mer om vetenskapen bakom BioWTR här.
+            Vi kan inte svara på hur BioWTR kommer att påverka dig. Vi kan
+            endast hänvisa till de vetenskapliga studier som har gjorts där
+            niacinets hälsofrämjande effekter studerats. Vi rekommenderar att du
+            alltid rådgör med din läkare angående hälsofrämjande interventioner.
           </span>
         </div>
 
         <div className=" flex flex-col gap-2">
           <span className=" text-2xl font-semibold">
-            Kan BioWTR höja mina idrottsprestationer
+            Kan BioWTR höja mina idrottsprestationer?
           </span>
           <span>
-            Vi kan inte säga hur BioWTR kommer påverka dig. Vi kan endast
-            hänvisa till den vetenskapliga litteraturen där det finns en
-            randomiserad kontroll studie där NMN-tillskott visats höja
-            syreupptagningsförmågan hos friska individer som löptränar. Läs mer
-            om vetenskapen bakom BioWTR här.
+            Niacintillskott har visats förbättra muskelfunktion i minst en
+            klinisk studie gjort på människa. Vi kan dock inte svara på om det
+            kommer ha en effekt på dina idrottsprestationer.
           </span>
         </div>
       </div>
@@ -79,16 +74,17 @@ const Faq = () => {
 
         <div className=" flex flex-col gap-2">
           <span className=" text-2xl font-semibold">
-            Kan det vara farligt att dricka för mycket BioWTR?
+            Kan det vara farligt att dricka för mycket BioWTR
           </span>
           <span>
-            I kliniska studier som gjorts har 250–1600 mg/dag använts vilket
-            motsvarar ca 1–6 flaskor BioWTR. Intag inom detta spann har inte
-            visats orsaka bieffekter. Vi vet dock inte om högre doser är säkert
-            att förtära. Niacin kan däremot orsaka hudrodnad vid intag mellan
-            30-1000 mg. mer info om niacin finns här (Niacin
-            (livsmedelsverket.se). Vi rekommenderar därför konsumenten att vara
-            uppmärksam för bieffekter vid intag av mer än 1 flaska om dagen.
+            En flaska BioWTR innehåller 16 mg Niacin vilket är 100% av
+            rekommenderat dagligt intag. Betydligt högre nivåer av niacin
+            används i kliniska studier (ca 100 gånger högre än rekommenderat
+            dagligt intag) och ger sällan några biverkningar. Hos vissa
+            individer kan niacinintag över 30 mg per dag ge biverkningar och
+            detta manifesterar i hudrodnad. Vi rekommenderar därför att alla
+            konsumenter rådgör med sin läkare om det dagliga rekommenderade
+            intaget av niacin planeras överskridas.
           </span>
         </div>
         <div className=" flex flex-col gap-2">

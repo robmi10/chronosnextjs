@@ -14,7 +14,7 @@ const Cart = () => {
 
   const cartIsNotEmpty = totalQuantity > 0;
   return (
-    <div className="fixed right-0 z-20 top-0 animate-moveback h-[900px]  overflow-auto w-screen md:w-3/12 bg-white border-2 border-gray-100">
+    <div className="fixed right-0 z-20 top-0 animate-moveback h-screen  overflow-auto w-screen md:w-3/12 bg-white border-2 border-gray-100">
       <div className=" flex flex-row  justify-between p-10">
         <div>CART</div>
         <button

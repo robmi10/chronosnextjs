@@ -1,10 +1,12 @@
 import { StripeContext } from "@/stripecontext/context";
 import Link from "next/link";
+
 import React, { useContext, useEffect } from "react";
 import { AiOutlineShopping, AiOutlineHome } from "react-icons/ai";
+import { CiMenuFries } from "react-icons/ci";
 
 const Navbar = () => {
-  const { setOpen, cart, totalquantity, setTotalquantity } =
+  const { setOpen, cart, totalquantity, menu, setMenu, setTotalquantity } =
     useContext(StripeContext);
   const cartBadge = cart.length > 0;
 
@@ -18,12 +20,39 @@ const Navbar = () => {
 
   return (
     <div className="w-full h-8 z-10 fixed bg-white border  border-gray-200 flex flex-row justify-between p-8 items-center">
-      <Link href="/">
-        <AiOutlineHome />
-      </Link>
+      <a href="/" className=" cursor-pointer" to="/">
+        <img
+          width={120}
+          height={120}
+          className="mt-5  "
+          src="/images/chronos.svg"
+        />
+      </a>
+      <div className="ml-20 flex flex-row gap-20 w-full">
+        <Link className=" hidden md:flex" href="#shop" scroll={false}>
+          HANDLA
+        </Link>
 
-      <div className=" text-2xl">BIO-WTR</div>
-      <div>
+        <Link className=" hidden md:flex" href="#faq" scroll={false}>
+          FAQ
+        </Link>
+
+        <Link className=" hidden md:flex" href="#infonow" scroll={false}>
+          OM-OSS
+        </Link>
+      </div>
+      {/* 
+      <Link
+        className=" cursor-pointer"
+        to="faq"
+        offset={0}
+        duration={1000}
+        smooth={true}
+      >
+        FAQ
+      </Link> */}
+
+      <div className="flex gap-4">
         <button
           onClick={() => {
             setOpen(true);
@@ -35,6 +64,17 @@ const Navbar = () => {
             </div>
           )}
           <AiOutlineShopping />
+        </button>
+        {/* setMenu */}
+
+        <button
+          className=" flex md:hidden"
+          onClick={() => {
+            setMenu(true);
+            console.log("setMenu", menu);
+          }}
+        >
+          <CiMenuFries />
         </button>
       </div>
     </div>
