@@ -21,12 +21,14 @@ const Navbar = () => {
   return (
     <div className="w-full h-8 z-10 fixed bg-white border  border-gray-200 flex flex-row justify-between p-8 items-center">
       <a href="/" className=" cursor-pointer" to="/">
-        <img
+        {/* <img
           width={120}
           height={120}
           className="mt-5  "
           src="/images/chronos.svg"
-        />
+        /> */}
+
+        <p className=" font-bold text-xs">BIOWTR</p>
       </a>
       <div className="ml-20 flex flex-row gap-20 w-full">
         <Link className=" hidden md:flex" href="#shop" scroll={false}>

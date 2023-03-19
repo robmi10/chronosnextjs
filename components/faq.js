@@ -74,21 +74,6 @@ const Faq = () => {
 
         <div className=" flex flex-col gap-2">
           <span className=" text-2xl font-semibold">
-            Kan det vara farligt att dricka för mycket BioWTR
-          </span>
-          <span>
-            En flaska BioWTR innehåller 16 mg Niacin vilket är 100% av
-            rekommenderat dagligt intag. Betydligt högre nivåer av niacin
-            används i kliniska studier (ca 100 gånger högre än rekommenderat
-            dagligt intag) och ger sällan några biverkningar. Hos vissa
-            individer kan niacinintag över 30 mg per dag ge biverkningar och
-            detta manifesterar i hudrodnad. Vi rekommenderar därför att alla
-            konsumenter rådgör med sin läkare om det dagliga rekommenderade
-            intaget av niacin planeras överskridas.
-          </span>
-        </div>
-        <div className=" flex flex-col gap-2">
-          <span className=" text-2xl font-semibold">
             Varför innehåller BioWTR både NMN och niacin?
           </span>
           <span>
