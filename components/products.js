@@ -72,10 +72,10 @@ const Products = () => {
                   <div className=" text-2xl">{option.product.name} </div>
                   <div className=" text-xl">{option.product.description} </div>
                   <h1 className=" text-lg">PRIS</h1>
-                  <h1 className=" text-sm">
+                  {/* <h1 className=" text-sm">
                     {" "}
                     {option?.unit_amount_decimal.slice(0, -2)} SEK
-                  </h1>
+                  </h1> */}
                 </div>
               </div>
               <div className=" w-full flex justify-center">
@@ -85,7 +85,7 @@ const Products = () => {
                       remove(option);
                     }}
                   >
-                    <AiOutlineMinus size={20} />
+                    {/* <AiOutlineMinus size={20} />
                   </button>
                   <div className=" text-xl ">
                     {cart?.[index] ? cart?.[index]?.quantity : 0}
@@ -95,7 +95,7 @@ const Products = () => {
                       add(option, index);
                     }}
                   >
-                    <AiOutlinePlus size={20} />
+                    <AiOutlinePlus size={20} /> */}
                   </button>
                 </div>
               </div>

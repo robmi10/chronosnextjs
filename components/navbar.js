@@ -55,7 +55,7 @@ const Navbar = () => {
       </Link> */}
 
       <div className="flex gap-4">
-        <button
+        {/* <button
           onClick={() => {
             setOpen(true);
           }}
@@ -66,10 +66,10 @@ const Navbar = () => {
             </div>
           )}
           <AiOutlineShopping />
-        </button>
+        </button> */}
         {/* setMenu */}
 
-        <button
+        {/* <button
           className=" flex md:hidden"
           onClick={() => {
             setMenu(true);
@@ -77,7 +77,7 @@ const Navbar = () => {
           }}
         >
           <CiMenuFries />
-        </button>
+        </button> */}
       </div>
     </div>
   );
