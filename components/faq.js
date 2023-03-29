@@ -27,18 +27,6 @@ const Faq = () => {
         <div className=" flex flex-col gap-2">
           <span className=" text-2xl font-semibold">
             {" "}
-            Finns niacin i kosten?
-          </span>
-          <span>
-            Ja, niacin finns i kosten och det är sällan människor i västvärlden
-            lider av niacinbrist. Dock kan tillskott av niacin ha hälsofrämjande
-            effekter.
-          </span>
-        </div>
-
-        <div className=" flex flex-col gap-2">
-          <span className=" text-2xl font-semibold">
-            {" "}
             Kommer jag att leva ett friskare liv om jag dricker BioWTR?
           </span>
           <span>
@@ -63,28 +51,6 @@ const Faq = () => {
       <div className="bg-slate-400 md:w-2/4 h-full flex flex-col gap-4 text-white p-8 justify-center items-center">
         <div className=" flex flex-col gap-2">
           <span className=" text-2xl font-semibold">
-            Är NMN ett stabilt ämne?
-          </span>
-          <span>
-            NMN är stabilt i rumstemperatur i pulverform. Vi vet dock inte hur
-            stabilt NMN är i vatten men vi planerar att göra tester på BioWTR i
-            samband med att vi växer som bolag.
-          </span>
-        </div>
-
-        <div className=" flex flex-col gap-2">
-          <span className=" text-2xl font-semibold">
-            Varför innehåller BioWTR både NMN och niacin?
-          </span>
-          <span>
-            Det finns flera ämnen som i kroppen omsätts till NAD + . Genom att
-            berika med flera komponenter ökar vi sannolikheten till att höja
-            nivåerna av NAD + .
-          </span>
-        </div>
-
-        <div className=" flex flex-col gap-2">
-          <span className=" text-2xl font-semibold">
             Varför sjunker NAD + -nivåerna i kroppen när vi åldras?
           </span>
           <span>
@@ -94,6 +60,18 @@ const Faq = () => {
             användning av NAD + som ökar och inte själva produktionen. Detta kan
             bero på en sekundär effekt som orsakas av andra processer som kräver
             NAD + såsom reparation av ett skadat DNA.
+          </span>
+        </div>
+
+        <div className=" flex flex-col gap-2">
+          <span className=" text-2xl font-semibold">
+            {" "}
+            Finns niacin i kosten?
+          </span>
+          <span>
+            Ja, niacin finns i kosten och det är sällan människor i västvärlden
+            lider av niacinbrist. Dock kan tillskott av niacin ha hälsofrämjande
+            effekter.
           </span>
         </div>
       </div>

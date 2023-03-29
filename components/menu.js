@@ -28,7 +28,7 @@ const Menu = () => {
           scroll={false}
           className=" text-2xl"
         >
-          HANDLA
+          PRODUKTER
         </Link>
         <Link
           href="#infonow"

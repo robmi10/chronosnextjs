@@ -56,7 +56,7 @@ const Products = () => {
   return (
     <div className="mt-16 mb-16 flex h-auto justify-center w-screen md:w-full flex-col items-center p-36 text-slate-700">
       <span className="text-4xl mt-10 md:text-5xl font-semibold  tracking-tight">
-        HANDLA
+        PRODUKTER
       </span>
       {prices?.map((option, index) => {
         return (
@@ -71,7 +71,7 @@ const Products = () => {
                 <div className=" flex mt-5 flex-col justify-center w-3/5 ">
                   <div className=" text-2xl">{option.product.name} </div>
                   <div className=" text-xl">{option.product.description} </div>
-                  <h1 className=" text-lg">PRIS</h1>
+                  {/* <h1 className=" text-lg">PRIS</h1> */}
                   {/* <h1 className=" text-sm">
                     {" "}
                     {option?.unit_amount_decimal.slice(0, -2)} SEK

@@ -32,7 +32,7 @@ const Navbar = () => {
       </a>
       <div className="ml-20 flex flex-row gap-20 w-full">
         <Link className=" hidden md:flex" href="#shop" scroll={false}>
-          HANDLA
+          PRODUKTER
         </Link>
 
         <Link className=" hidden md:flex" href="#faq" scroll={false}>
