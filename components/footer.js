@@ -14,8 +14,6 @@ const Footer = () => {
       <Link target="_blank" href="https://www.instagram.com/biowtr/">
         <AiFillInstagram width={18} height={18} />
       </Link>
-      <Link href="/terms">Terms</Link>
-      <Link href="/privacy">Privacy Policy</Link>
     </footer>
   );
 };
